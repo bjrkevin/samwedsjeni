@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Great+Vibes&family=Poppins:wght@300;400;500&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body,
+#root{
+  width:100%;
+  min-height:100%;
+  overflow-x:hidden;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#050816;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* PAGE */
+
+.page{
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+
+  background:
+  radial-gradient(circle at top,#132347 0%,#050816 55%,#010308 100%);
+}
+
+/* GLITTER */
+
+.glitter-wrapper{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+}
+
+.glitter{
+  position:absolute;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#facc15;
+  top:110%;
+
+  box-shadow:
+  0 0 10px #facc15,
+  0 0 20px #facc15;
+
+  animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+
+  from{
+    transform:translateY(0);
+    opacity:0;
+  }
+
+  20%{
+    opacity:1;
+  }
+
+  to{
+    transform:translateY(-130vh);
+    opacity:0;
+  }
+
+}
+
+/* OVERLAY */
+
+.overlay{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+/* INTRO CARD */
+
+.introCard{
+
+  width:100%;
+  max-width:420px;
+
+  padding:55px 28px;
+
+  border-radius:30px;
+
+  background:
+  rgba(255,255,255,.08);
+
+  border:
+  1px solid rgba(255,215,0,.2);
+
+  backdrop-filter:blur(18px);
+
+  text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
+
+  box-shadow:
+  0 0 60px rgba(255,215,0,.12);
+
+  animation:fadeScale 1s ease;
+}
+
+/* CORNERS */
+
+.corner{
+  position:absolute;
+  font-size:70px;
+  opacity:.15;
+}
+
+.topLeft{
+  top:-10px;
+  left:-10px;
+}
+
+.topRight{
+  top:-10px;
+  right:-10px;
+}
+
+.bottomLeft{
+  bottom:-10px;
+  left:-10px;
+}
+
+.bottomRight{
+  bottom:-10px;
+  right:-10px;
+}
+
+/* RING */
+
+.ring{
+  font-size:60px;
+  animation:float 3s ease-in-out infinite;
+}
+
+/* TITLE */
+
+.heroTitle{
+  margin-top:18px;
+  font-size:60px;
+  font-family:'Great Vibes',cursive;
+  color:#facc15;
+}
+
+.heroSubtitle{
+  margin-top:15px;
+  color:white;
+  letter-spacing:4px;
+  font-size:12px;
+}
+
+/* INPUT */
+
+.nameInput{
+
+  width:100%;
+
+  margin-top:35px;
+
+  padding:16px;
+
+  border-radius:14px;
+
+  border:
+  1px solid rgba(255,215,0,.2);
+
+  outline:none;
+
+  background:
+  rgba(255,255,255,.08);
+
+  color:white;
+
+  font-size:16px;
+}
+
+.nameInput::placeholder{
+  color:#ddd;
+}
+
+/* BUTTON */
+
+.openButton{
+
+  width:100%;
+
+  margin-top:22px;
+
+  padding:16px;
+
+  border:none;
+
+  border-radius:14px;
+
+  background:
+  linear-gradient(135deg,#facc15,#ca8a04);
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.4s;
+}
+
+.openButton:hover{
+  transform:translateY(-4px);
+}
+
+/* MAIN */
+
+.mainContainer{
+  display:flex;
+  justify-content:center;
+  padding:35px 18px;
+}
+
+/* CARD */
+
+.inviteCard{
+
+  width:100%;
+  max-width:900px;
+
+  padding:55px 28px;
+
+  border-radius:30px;
+
+  background:
+  linear-gradient(180deg,#fffef9,#fef3c7);
+
+  position:relative;
+
+  overflow:hidden;
+
+  animation:fadeIn 1s ease;
+}
+
+/* GLOW */
+
+.goldGlow{
+
+  position:absolute;
+
+  top:-120px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:350px;
+  height:350px;
+
+  border-radius:50%;
+
+  background:
+  radial-gradient(circle,#facc15,transparent);
+
+  opacity:.12;
+}
+
+/* WELCOME */
+
+.welcomeText{
+  text-align:center;
+  font-size:28px;
+  color:#78350f;
+}
+
+.welcomeText span{
+  font-family:'Great Vibes',cursive;
+  color:#991b1b;
+  font-size:42px;
+}
+
+/* DIVIDER */
+
+.divider{
+  width:220px;
+  height:1px;
+
+  margin:25px auto;
+
+  background:
+  linear-gradient(to right,transparent,#ca8a04,transparent);
+}
+
+/* HEADING */
+
+.mainHeading{
+  text-align:center;
+  font-size:50px;
+  font-family:'Cinzel',serif;
+  color:#991b1b;
+}
+
+/* VERSE */
+
+.verse{
+  text-align:center;
+  margin:28px 0;
+  font-style:italic;
+  line-height:1.9;
+}
+
+/* HOST */
+
+.hostSection{
+  text-align:center;
+  line-height:2;
+}
+
+.andText{
+  margin:20px 0;
+  font-size:35px;
+  color:#ca8a04;
+  font-family:'Great Vibes',cursive;
+}
+
+/* INVITE */
+
+.inviteText{
+  margin:35px 0;
+  text-align:center;
+  line-height:2;
+}
+
+/* COUPLE */
+
+.coupleSection{
+  text-align:center;
+}
+
+.name{
+  font-size:64px;
+  color:#991b1b;
+  font-family:'Great Vibes',cursive;
+}
+
+.withText{
+  margin:28px 0;
+  font-size:36px;
+  color:#ca8a04;
+  font-family:'Great Vibes',cursive;
+}
+
+.qualification{
+  margin-top:10px;
+}
+
+/* COUNTDOWN */
+
+.countdownSection{
+
+  margin:50px 0;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:16px;
+}
+
+.countBox{
+
+  background:#111827;
+
+  color:white;
+
+  border-radius:20px;
+
+  padding:22px;
+
+  text-align:center;
+}
+
+.countBox h3{
+  color:#facc15;
+  font-size:38px;
+}
+
+/* EVENT */
+
+.eventCard{
+
+  padding:28px;
+
+  border-radius:24px;
+
+  margin-bottom:25px;
+
+  text-align:center;
+
+  line-height:2;
+
+  background:
+  rgba(255,255,255,.7);
+
+  border:
+  1px solid rgba(255,215,0,.2);
+}
+
+.eventCard h3{
+  margin-bottom:15px;
+  color:#991b1b;
+}
+
+/* MAP */
+
+.mapButton{
+
+  display:inline-block;
+
+  margin-top:18px;
+
+  padding:14px 24px;
+
+  border-radius:14px;
+
+  background:
+  linear-gradient(135deg,#facc15,#ca8a04);
+
+  color:black;
+
+  text-decoration:none;
+
+  font-weight:700;
+}
+
+/* FOOTER */
+
+.footer{
+  margin-top:50px;
+  text-align:center;
+  line-height:2;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeScale{
+
+  from{
+    opacity:0;
+    transform:scale(.92);
+  }
+
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+
+}
+
+@keyframes fadeIn{
+
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0);
+  }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .heroTitle{
+    font-size:50px;
+  }
+
+  .mainHeading{
+    font-size:34px;
+  }
+
+  .name{
+    font-size:46px;
+  }
+
+  .countdownSection{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .inviteCard{
+    padding:40px 20px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .heroTitle{
+    font-size:42px;
+  }
+
+  .mainHeading{
+    font-size:28px;
+  }
+
+  .name{
+    font-size:38px;
+  }
+
+  .welcomeText{
+    font-size:22px;
+  }
+
+  .welcomeText span{
+    font-size:34px;
+  }
+
+  .inviteCard{
+    padding:30px 16px;
+    border-radius:22px;
+  }
+
+  .introCard{
+    padding:40px 22px;
+  }
+
+  .countBox{
+    padding:16px;
+  }
+
+  .countBox h3{
+    font-size:28px;
+  }
+
+  .mapButton{
+    width:100%;
+  }
+
+}
